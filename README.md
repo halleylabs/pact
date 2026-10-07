@@ -1,10 +1,12 @@
 # Pact — Sovereign Agent Authentication Protocol
 
+<sub>A <a href="https://halleylabs.dev">Halley</a> project</sub>
+
 > A cryptographic protocol for AI agents. Not a service. Not a platform. A **protocol** — like HTTPS, but for agents proving who they are, who sent them, and what they're allowed to do.
 
 **Zero dependencies. Zero network calls. Zero trust assumptions.**
 
-> **See Pact deployed:** [Witness](https://github.com/anzal1/witness) uses Pact as the identity layer of a recording proxy for model APIs — signed calls, delegation chains enforced at the network boundary, and a Merkle-committed audit trail for agent fleets.
+> **See Pact deployed:** [Witness](https://github.com/halleylabs/witness) uses Pact as the identity layer of a recording proxy for model APIs — signed calls, delegation chains enforced at the network boundary, and a Merkle-committed audit trail for agent fleets.
 
 ---
 
@@ -97,19 +99,19 @@ Human (Alice) signs delegation → Agent (carries chain + capabilities)
 ### As a Go library
 
 ```bash
-go get github.com/anzal1/pact
+go get github.com/halleylabs/pact
 ```
 
 ### CLI
 
 ```bash
-go install github.com/anzal1/pact/cmd/pact@latest
+go install github.com/halleylabs/pact/cmd/pact@latest
 ```
 
 ### Build from source
 
 ```bash
-git clone https://github.com/anzal1/pact.git
+git clone https://github.com/halleylabs/pact.git
 cd pact
 make build    # binary at bin/pact
 make test     # run all tests
@@ -185,7 +187,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 The fastest way for a provider to adopt Pact — one line to protect any route:
 
 ```go
-import "github.com/anzal1/pact"
+import "github.com/halleylabs/pact"
 
 // Protect your entire API
 mux := http.NewServeMux()
@@ -235,7 +237,7 @@ func handleData(w http.ResponseWriter, r *http.Request) {
 For providers with existing OAuth/API-key backends — bridge Pact chains into credentials your system already understands:
 
 ```go
-import "github.com/anzal1/pact"
+import "github.com/halleylabs/pact"
 
 // Map Pact capabilities to your scopes
 mapper := pact.NewStaticCapabilityMapper(map[string][]string{
@@ -276,7 +278,7 @@ Human (long-lived)  →  Agent Root (persistent, KeyStore)  →  Session (epheme
 Each arrow is a Pact delegation. The full chain is offline-verifiable. Like TLS certificates: a root CA in an HSM issues short-lived leaf certificates. The root never touches the wire.
 
 ```go
-import "github.com/anzal1/pact"
+import "github.com/halleylabs/pact"
 
 // Load persistent root identity from KeyStore
 store, _ := pact.DefaultKeyStore()
@@ -351,7 +353,7 @@ pact/
 ├── CAPABILITIES.md     # Capability naming conventions
 ├── Makefile            # build, test, lint, install
 ├── .golangci.yml       # Linter configuration
-└── go.mod              # Module: github.com/anzal1/pact
+└── go.mod              # Module: github.com/halleylabs/pact
 ```
 
 ### Capability Conventions

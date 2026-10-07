@@ -49,7 +49,7 @@ assert result.valid
 
 ## Protocol Spec
 
-See [SPEC.md](https://github.com/anzal1/pact/blob/main/SPEC.md) for the full 968-line protocol specification.
+See [SPEC.md](https://github.com/halleylabs/pact/blob/main/SPEC.md) for the full 968-line protocol specification.
 
 ## License
 

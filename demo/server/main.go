@@ -10,7 +10,7 @@ import (
 	"os"
 	"time"
 
-	pact "github.com/anzal1/pact"
+	pact "github.com/halleylabs/pact"
 )
 
 var store struct {

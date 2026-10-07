@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
-	pact "github.com/anzal1/pact"
+	pact "github.com/halleylabs/pact"
 )
 
 const (

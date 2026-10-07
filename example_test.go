@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	pact "github.com/anzal1/pact"
+	pact "github.com/halleylabs/pact"
 )
 
 func ExampleNewIdentity() {

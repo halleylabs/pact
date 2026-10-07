@@ -27,9 +27,9 @@ classifiers = [
 dependencies = ["cryptography>=41.0"]
 
 [project.urls]
-Homepage = "https://github.com/anzal1/pact"
-Repository = "https://github.com/anzal1/pact"
-Documentation = "https://github.com/anzal1/pact/blob/main/SPEC.md"
+Homepage = "https://github.com/halleylabs/pact"
+Repository = "https://github.com/halleylabs/pact"
+Documentation = "https://github.com/halleylabs/pact/blob/main/SPEC.md"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
